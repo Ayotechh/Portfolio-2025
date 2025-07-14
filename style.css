@@ -283,11 +283,22 @@ body {
   }
 }
 
-/* Rainbow color effect for each letter */
+.typewriter-output {
+  display: flex;
+  flex-wrap: wrap;              /* allow text to break to next line */
+  gap: 4px;                     /* spacing between letters */
+  max-width: 100%;              /* prevents overflow */
+  word-break: break-word;       /* breaks long words */
+  line-height: 1.4;
+  justify-content: start;
+  align-items: center;
+}
+
 .typewriter-output span {
   display: inline-block;
   animation: rainbow 1s linear infinite;
 }
+
 
 @keyframes rainbow {
   0% { color: red; }
