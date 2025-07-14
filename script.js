@@ -71,7 +71,7 @@ function typeEffect() {
     typingSpeed = 120;
   } else if (isDeleting && charIndex > 0) {
     charIndex--;
-    typingSpeed = 40;
+    typingSpeed = 60;
   } else {
     isDeleting = !isDeleting;
     typingSpeed = isDeleting ? 1000 : 500;
