@@ -1,0 +1,824 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("\Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("\Montserrat-Regular.ttf");
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0 60px;
+}
+
+/* The Header with the navigation links */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-logo {
+  display: flex;
+  align-items: center;
+}
+
+.name-logo img {
+  width: 15%;
+}
+
+.nav-links ul {
+  padding: 0 20px;
+  display: flex;
+  margin-left: -30%;
+}
+
+.nav-links ul li {
+  display: inline;
+  margin: 0 15px;
+  font-size: 20px;
+  font-family: "Montserrat";
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-links a:hover {
+  color: darkgray;
+  transition: color 300ms ease-in-out;
+}
+
+.mail-cta {
+  display: flex;
+  font-family: "Montserrat";
+}
+
+.mail-cta a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+.mail-cta img {
+  vertical-align: middle;
+  width: 15%;
+}
+
+.mail-cta a:hover {
+  color: darkgrey;
+  transition: color 300ms ease-in-out;
+}
+
+/* Photo Explaining What Author Does */
+.photo-exp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10%;
+  gap: 10px;
+}
+
+.photo-exp-one {
+  font-size: 2em;
+}
+
+.photo-exp-one p {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.photo-exp-one button {
+  height: 5rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: all 300ms ease-in-out;
+}
+
+.photo-exp-one button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 2px 5px 0 darkgray;
+  transition: all 300ms ease-in;
+}
+
+.photo-exp-two img {
+  width: 100% !important;
+  max-width: fit-content;
+  height: 90%;
+  margin: 0 auto;
+}
+
+/* Services */
+.services {
+  margin: 15% 0;
+}
+
+.service-one {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-one h2 {
+  font-size: 2.8rem;
+}
+
+.service-one p {
+  line-height: 2;
+  color: grey;
+  font-family: "Montserrat";
+}
+
+.services-cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 30px 80px;
+  gap: 30px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+}
+
+.services-cta p {
+  line-height: 2;
+  font-family: "Montserrat";
+}
+
+.services-cta img {
+  background-color: rgb(255, 252, 252);
+  padding: 20px;
+  border-radius: 30%;
+}
+
+.web-dsg,
+.ui-ux {
+  margin-top: 60px;
+}
+
+.web-dev,
+.prd-dsg {
+  margin-bottom: 60px;
+}
+
+.web-dsg,
+.prd-dsg,
+.ui-ux,
+.web-dev {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+
+.web-dsg,
+.prd-dsg {
+  margin-left: -80px;
+}
+
+.ui-ux,
+.web-dev {
+  margin-right: -80px;
+}
+
+.services button {
+  height: 5rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  transition: all 300ms ease-in-out;
+}
+
+.services button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 2px 5px 0 darkgray;
+  transition: all 300ms ease-in;
+}
+
+/* About Me */
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.about-me-profile img {
+  width: 100%;
+  border-radius: 5%;
+  height: 90%;
+}
+
+.about-me-exp {
+  margin-top: 15%;
+}
+
+.about-me-exp h2 {
+  font-size: 2.8rem;
+}
+
+.about-me-exp p {
+  font-family: "Montserrat";
+  line-height: 2;
+}
+
+.about-me-exp button {
+  height: 5rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-top: 5%;
+  transition: all 300ms ease-in-out;
+}
+
+.about-me-exp button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 2px 5px 0 darkgray;
+  transition: all 300ms ease-in;
+}
+
+/* Resume */
+.resume {
+  margin: 15% 0;
+}
+
+.resume-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-head h2 {
+  font-size: 2.8rem;
+}
+
+.resume-head button {
+  height: 5rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: all 300ms ease-in-out;
+}
+
+.resume-head button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 2px 5px 0 darkgray;
+  transition: all 300ms ease-in;
+}
+
+.resume-work {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgb(247, 247, 247);
+  gap: 30px;
+  margin: 30px 80px;
+  border-radius: 20px;
+}
+
+.res-p {
+  font-family: "Montserrat";
+  line-height: 2;
+  color: grey;
+}
+
+.res-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.res-logo img {
+  width: 12%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pixlr,
+.canva,
+.removal-ai,
+.shutterstock {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+
+.pixlr,
+.removal-ai {
+  margin-left: -80px;
+}
+
+.canva,
+.shutterstock {
+  margin-right: -80px;
+}
+
+.pixlr,
+.canva {
+  margin-top: 60px;
+}
+
+.removal-ai,
+.shutterstock {
+  margin-bottom: 60px;
+}
+
+/* Design Portfolio */
+.dsg-port {
+  margin-bottom: 15%;
+}
+
+.dsg-port-head h2 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.dsg-port-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.dsg-port-exp {
+  margin: 0 30px;
+}
+
+.dsg-port-exp h2 {
+  font-size: 1.5rem;
+}
+
+.dsg-port-exp p {
+  font-family: "Montserrat";
+  line-height: 2;
+}
+
+.dsg-port-exp img {
+  border-radius: 30px;
+  width: 100%;
+}
+
+.dsg-port-exp a {
+  color: #000;
+}
+
+/* What my client say about my work */
+.client-info {
+  margin: 5% 0 10% 0;
+}
+
+.cl-info-head {
+  text-align: center;
+}
+
+.cl-info-head h2 {
+  font-size: 2.8rem;
+}
+
+.cl-info-head p {
+  font-family: "Montserrat";
+}
+
+.testimonies {
+  margin: 30px 80px;
+}
+
+.test-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px 30px;
+  margin: 20px 0;
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+}
+
+.test-p {
+  font-weight: bold;
+  font-family: "Poppins";
+}
+
+.test-talk {
+  margin-top: 15%;
+}
+
+.test-talk p {
+  font-family: "Montserrat";
+  line-height: 2;
+  font-size: 1.3rem;
+}
+
+.test-photo img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Articles and News */
+.art-news {
+  margin: 15% 0;
+}
+
+.a-n-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a-n-head h2 {
+  font-size: 2.8rem;
+}
+
+.a-n-head button {
+  height: 5rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: all 300ms ease-in-out;
+}
+
+.a-n-head button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 2px 5px 0 darkgray;
+  transition: all 300ms ease-in;
+}
+
+.art-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.art-container a {
+  color: #000;
+  text-decoration: none;
+}
+
+.art-a {
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+.art-a h2,
+p {
+  padding: 0 15px;
+}
+
+.art-a img {
+  width: 100%;
+}
+
+/* Follow me on IG */
+.follow-ig {
+  margin: 0 0 5% 0;
+}
+
+.ig-head {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ig-head h2 {
+  font-size: 2.8rem;
+}
+
+.ig-head a {
+  color: #000;
+}
+
+.ig-photo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.ig-photo img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.first-hr {
+  margin: 10% -60px 12% -60px;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 30px;
+}
+
+.f-a p {
+  font-size: 1.3rem;
+}
+
+.f-a img {
+  width: 15%;
+  margin: 0 5px;
+}
+
+.f-b a,
+.f-b-sub a,
+.f-c a,
+.f-d a {
+  text-decoration: none;
+  color: grey;
+  display: block;
+  margin: 20px 0;
+  font-size: 1.3rem;
+  font-family: "Montserrat";
+}
+
+.f-b a:hover,
+.f-b-sub a:hover,
+.f-c a:hover,
+.f-d a:hover {
+  color: darkgray;
+  opacity: 0.8;
+  transition: all 300ms ease-in-out;
+}
+
+.sec-hr {
+  margin: 5% 60px 1% 60px;
+}
+
+.final-p {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0 20px;
+  }
+
+  .header {
+    margin: 0 -20px;
+  }
+
+  .name-logo img {
+    width: 25%;
+  }
+
+  .name-logo h2 {
+    font-size: 1.5rem;
+    margin-left: -15px;
+  }
+
+  .nav-links ul {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .nav-links ul li {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+
+  .nav-links ul li:first-child,
+  .nav-links ul li:nth-child(2n),
+  .nav-links ul li:nth-child(3n) {
+    display: none;
+  }
+
+  .mail-cta {
+    display: none;
+  }
+
+  .photo-exp {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .photo-exp-one br {
+    display: none;
+  }
+
+  .photo-exp-one p {
+    font-size: 0.7em;
+  }
+
+  .photo-exp-one h1 {
+    font-size: 2.8rem;
+  }
+
+  .services-cta {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 10px;
+  }
+
+  .service-one p br {
+    display: none;
+  }
+
+  .services-cta p br {
+    display: none;
+  }
+
+  .web-dsg,
+  .prd-dsg {
+    margin-left: 0;
+  }
+
+  .ui-ux,
+  .web-dev {
+    margin-right: 0;
+  }
+
+  .web-dsg,
+  .web-dev,
+  .prd-dsg,
+  .ui-ux {
+    margin: 0 -20px;
+  }
+
+  .web-dsg {
+    margin-top: 40px;
+  }
+
+  .web-dev {
+    margin-bottom: 40px;
+  }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 15% 0;
+  }
+
+  .about-me-exp {
+    margin-top: -10%;
+  }
+
+  .about-me-exp p br {
+    display: none;
+  }
+
+  .about-me-profile {
+    grid-row: 2;
+  }
+
+  .resume-head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume-head h2 {
+    font-size: 2rem;
+  }
+
+  .res-post h2 {
+    font-size: 1rem;
+  }
+
+  .resume-work {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 10px;
+  }
+
+  .res-p br {
+    display: none;
+  }
+
+  .pixlr,
+  .removal-ai {
+    margin-left: 0;
+  }
+
+  .canva,
+  .shutterstock {
+    margin-right: 0;
+  }
+
+  .pixlr,
+  .removal-ai,
+  .canva,
+  .shutterstock {
+    margin: 0 -20px;
+  }
+
+  .pixlr {
+    margin-top: 40px;
+  }
+
+  .shutterstock {
+    margin-bottom: 40px;
+  }
+
+  .dsg-port-head h2 {
+    font-size: 1.5rem;
+  }
+
+  .dsg-port-container {
+    flex-wrap: wrap;
+    margin: 0 20px;
+  }
+
+  .dsg-port-exp {
+    margin: 20px 0;
+  }
+
+  .dsg-port-exp img {
+    width: 100%;
+  }
+
+  .cl-info-head h2 {
+    font-size: 2rem;
+  }
+
+  .testimonies {
+    margin: 30px 10px;
+  }
+
+  .test-one {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 0;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .test-talk {
+    grid-row: 2;
+    text-align: center;
+  }
+
+  .test-talk br {
+    display: none;
+  }
+
+  .a-n-head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .a-n-head h2 {
+    font-size: 2rem;
+  }
+
+  .art-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ig-head h2 {
+    font-size: 1.5rem;
+  }
+
+  .ig-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .f-a {
+    grid-column: 1 / 3;
+  }
+
+  .f-a img {
+    width: 10%;
+  }
+
+  .f-b a,
+  .f-b-sub a,
+  .f-c a,
+  .f-d a {
+    font-size: 1rem;
+  }
+
+  .first-hr,
+  .sec-hr {
+    width: 100%;
+    margin: 0;
+  }
+
+  .final-p {
+    font-size: 1rem;
+  }
+}
