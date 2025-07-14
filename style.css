@@ -9,8 +9,19 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
+        scroll-behavior: smooth;
+      }
+
+      [data-fade] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      [data-fade].visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
 body {
   font-family: "Poppins";
@@ -27,6 +38,7 @@ body {
 .name-logo {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .name-logo img {

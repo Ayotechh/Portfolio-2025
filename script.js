@@ -2,7 +2,7 @@
 const modal = document.getElementById("blockModal");
 const closeBtn = document.getElementById("closeModal");
 const faders = document.querySelectorAll(".fade-in");
- document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 function showModal() {
   modal.style.display = "flex";
@@ -29,18 +29,18 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// === Fade-In on Scroll ===
+ // Scroll fade-in effect
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
 
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target); // Animate only once
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-faders.forEach((el) => observer.observe(el));
+      document.querySelectorAll("[data-fade]").forEach((section) => {
+        observer.observe(section);
+      });

@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/jpg" href="/Images/Ayotech Logo.jpg" />
     <title>Ayotech | Where innovation meets creativity</title>
   </head>
+  <body>
     <!-- The Header with the navigation links -->
     <div class="header">
-      <div class="name-logo">
-        <img src="images/1000381938-removebg-preview.png" alt="Ayotech" />
+      <div a href="#Home" class="name-logo">
+        <img src="images/Ayotech Logo.jpg" alt="Ayotech" />
         <h2>Ayotech</h2>
+      </a>
       </div>
 
       <div class="nav-links">
         <ul>
           <li><a href="#Home"> Home</a></li>
-          <li><a href="#About"> About</a></li>
-          <li><a href="#Services"> Services</a></li>
-          <li><a href="#Resume">Resume</a></li>
+          <li><a href="#about"> About</a></li>
+          <li><a href="#services"> Services</a></li>
+          <li><a href="#resume">Resume</a></li>
         </ul>
       </div>
 
@@ -30,7 +33,7 @@
     </div>
 
     <!-- Photo Explaining What Author Does -->
-    <div class="photo-exp">
+    <div id="Home" class="photo-exp" data-fade>
       <div class="photo-exp-one">
         <p>Hey, I'm Ayomide Lawal</p>
         <h1>
@@ -46,13 +49,13 @@
       <div class="photo-exp-two">
         <img
           src="/Images/Full image.png"
-          alt="Ayomide Lawal"
+          alt="Ayomide Lawal" data-fade
         />
       </div>
     </div>
 
     <!-- My Services -->
-    <div class="services" id="services">
+    <div class="services" id="services" data-fade>
       <div class="service-one">
         <h2>My services</h2>
         <p>
@@ -113,7 +116,7 @@
     </div>
 
     <!-- About Me -->
-    <div class="about-me" id="about">
+    <div class="about-me" id="about" data-fade>
       <div class="about-me-profile">
         <img
           src="/Images/Ayotech Logo.jpg"
@@ -129,14 +132,14 @@
           <br />
           I deliver innovative web solutions to drive engagement and success.
         </p>
-                <a href="https://www.linkedin.com/in/Ayotech" target="_blank" rel="linkedin">
-        <button>LinkedIn</button>
+          <a href="https://www.linkedin.com/in/Ayotech" target="_blank" rel="linkedin">
+        <button>More About Ayotech</button>
         </a>
       </div>
     </div>
 
     <!-- Resume -->
-    <div class="resume" id="resume">
+    <div class="resume" id="resume" data-fade>
       <div class="resume-head">
         <h2>Take a look at my resume</h2>
         <a href="Ayomide-Lawal-CV.pdf" target="_blank">
@@ -209,7 +212,7 @@
     </div>
 
     <!-- Design Portfolio -->
-    <div class="dsg-port">
+    <div class="dsg-port" data-fade>
       <div class="dsg-port-head">
         <h2>Take a look at my design portfolio</h2>
       </div>
@@ -254,7 +257,7 @@
     </div>
 
     <!-- What my client say about my work -->
-    <div class="client-info>">
+     <div class="client-info" data-fade>
       <div class="cl-info-head">
         <h2>What our client say about our work</h2>
         <p>Every project tells a story. Here's what clients had to say.</p>
