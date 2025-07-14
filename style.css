@@ -265,6 +265,41 @@ body {
   transition: all 300ms ease-in;
 }
 
+
+.typewriter-output {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  display: inline-block;
+  animation: blinkCursor 0.75s step-end infinite;
+  min-height: 2.5em;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Rainbow color effect for each letter */
+.typewriter-output span {
+  display: inline-block;
+  animation: rainbow 1s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: indigo; }
+  57% { color: green; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: blue; }
+}
+
 /* Resume */
 .resume {
   margin: 15% 0;

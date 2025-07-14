@@ -44,3 +44,45 @@ document.addEventListener("keydown", function (e) {
       document.querySelectorAll("[data-fade]").forEach((section) => {
         observer.observe(section);
       });
+
+      const phrases = [
+  "A Frontend Developer",
+  "A Product Designer",
+  "A Cybersecurity Analyst"
+];
+
+const output = document.querySelector(".typewriter-output");
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+
+function typeEffect() {
+  const currentPhrase = phrases[phraseIndex];
+  const displayedText = currentPhrase.substring(0, charIndex);
+
+  // Wrap each character in a <span> for coloring
+  output.innerHTML = [...displayedText]
+    .map((char) => `<span>${char === " " ? "&nbsp;" : char}</span>`)
+    .join("");
+
+  if (!isDeleting && charIndex < currentPhrase.length) {
+    charIndex++;
+    typingSpeed = 120;
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    typingSpeed = 40;
+  } else {
+    isDeleting = !isDeleting;
+    typingSpeed = isDeleting ? 1000 : 500;
+    if (!isDeleting) {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+  }
+
+  setTimeout(typeEffect, typingSpeed);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});
