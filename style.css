@@ -8,6 +8,10 @@
   src: url("\Montserrat-Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins";
   margin: 0 60px;
@@ -282,6 +286,25 @@ body {
   transition: all 300ms ease-in;
 }
 
+button {
+  height: 3rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 2px 5px 0 darkgray;
+  transition: all 300ms ease-in;
+}
+
 .resume-work {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -309,32 +332,29 @@ body {
   margin-right: 10px;
 }
 
-.pixlr,
-.canva,
-.removal-ai,
-.shutterstock {
+.coodeck,
+.socialpay,
+.jdq {
   background-color: #fff;
   padding: 20px 30px;
   border-radius: 20px;
 }
 
-.pixlr,
-.removal-ai {
+.coodeck,
+.jdq {
   margin-left: -80px;
 }
 
-.canva,
-.shutterstock {
+.socialpay {
   margin-right: -80px;
 }
 
-.pixlr,
-.canva {
+.coodeck,
+.socialpay {
   margin-top: 60px;
 }
 
-.removal-ai,
-.shutterstock {
+.jdq {
   margin-bottom: 60px;
 }
 
@@ -702,28 +722,25 @@ footer {
     display: none;
   }
 
-  .pixlr,
-  .removal-ai {
+  .coodeck,
+  .jdq {
     margin-left: 0;
   }
 
-  .canva,
-  .shutterstock {
+  .socialpay, {
     margin-right: 0;
   }
 
-  .pixlr,
-  .removal-ai,
-  .canva,
-  .shutterstock {
+  .coodeck,
+  .jdq,
+  .socialpay, {
     margin: 0 -20px;
   }
 
-  .pixlr {
+  .coodeck {
     margin-top: 40px;
   }
-
-  .shutterstock {
+ {
     margin-bottom: 40px;
   }
 
@@ -821,4 +838,57 @@ footer {
   .final-p {
     font-size: 1rem;
   }
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #222;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #555;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
