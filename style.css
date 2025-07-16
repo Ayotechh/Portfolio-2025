@@ -28,6 +28,11 @@ body {
   margin: 0 60px;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* The Header with the navigation links */
 .header {
   display: flex;
