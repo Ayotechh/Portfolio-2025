@@ -124,13 +124,25 @@ body {
   transition: all 300ms ease-in;
 }
 
-.photo-exp-two img {
-  width: 100% !important;
-  max-width: fit-content;
-  height: 100%;
+.photo-exp-two {
+  width: 280px;
+  height: 360px;
+  border-radius: 50% 50% 0% 0%;
+  overflow: hidden;
   margin: 0 auto;
-  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* align image to top */
+  border: 2px solid #8d8d8d;
 }
+
+.photo-exp-two img {
+  width: 115%;               /* zoom in a bit */
+  height: auto;
+  object-fit: cover;
+  object-position: top;      /* keeps top of image visible */
+}
+
 
 /* Services */
 .services {
