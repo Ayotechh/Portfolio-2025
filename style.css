@@ -714,7 +714,14 @@ footer {
   .header {
     margin: 0 -20px;
   }
+    .typewriter-output {
+    font-size: 1.5rem;
+  }
 
+    h1, h2 {
+    word-wrap: break-word;
+  }
+  
   .name-logo img {
     width: 25%;
   }
