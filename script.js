@@ -61,10 +61,15 @@ function typeEffect() {
   const currentPhrase = phrases[phraseIndex];
   const displayedText = currentPhrase.substring(0, charIndex);
 
-  // Wrap each character in a <span> for coloring
-  output.innerHTML = [...displayedText]
-    .map((char) => `<span>${char === " " ? "&nbsp;" : char}</span>`)
-    .join("");
+  // Split into words, then wrap each word in a span with inner letter spans
+  const wordSpans = displayedText.split(" ").map((word) => {
+    const letterSpans = [...word]
+      .map((char) => `<span>${char}</span>`)
+      .join("");
+    return `<span class="word">${letterSpans}&nbsp;</span>`; // &nbsp; to preserve space
+  });
+
+  output.innerHTML = wordSpans.join("");
 
   if (!isDeleting && charIndex < currentPhrase.length) {
     charIndex++;

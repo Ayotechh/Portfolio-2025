@@ -127,8 +127,9 @@ body {
 .photo-exp-two img {
   width: 100% !important;
   max-width: fit-content;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
+  border-radius: 50px;
 }
 
 /* Services */
@@ -273,7 +274,7 @@ body {
   overflow: hidden;
   border-right: 2px solid #fff;
   display: inline-block;
-  animation: blinkCursor 0.75s step-end infinite;
+  animation: rainbow 1s linear infinite;
   min-height: 2.5em;
 }
 
@@ -299,6 +300,10 @@ body {
   animation: rainbow 1s linear infinite;
 }
 
+.word {
+  white-space: nowrap;
+  display: inline-block;
+}
 
 @keyframes rainbow {
   0% { color: red; }
@@ -600,39 +605,43 @@ p {
 /* Footer */
 footer {
   display: flex;
-  justify-content: center; /* center the inner content horizontally */
-  align-items: center;     /* center vertically */
+  justify-content: center;
+  align-items: center;
   background-color: #555;
-  padding: 40px 0;
+  padding: 40px 20px; /* added horizontal padding */
   color: white;
-  gap: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* ensures padding is included in total width */
+  overflow-x: hidden;     /* prevent horizontal overflow */
 }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: repeat(3, auto); /* 5 horizontal columns */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive layout */
   gap: 40px;
+  width: 100%;
+  max-width: 1200px; /* keep it centered and readable on large screens */
+  box-sizing: border-box;
+  padding: 0 20px; /* add space on both sides for small screens */
 }
-
-
 
 .f-a p {
   font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
 .f-a img {
-  width: 28px;         /* fixed small-moderate size */
-  height: 28px;        /* keep them square */
+  width: 28px;
+  height: 28px;
   margin: 0 8px;
-  object-fit: contain; /* prevents distortion */
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .f-a img:hover {
-  transform: scale(1.1); /* slight zoom on hover (optional) */
+  transform: scale(1.1);
 }
-
 
 .f-b a,
 .f-b-sub a,
@@ -641,9 +650,10 @@ footer {
   text-decoration: none;
   color: grey;
   display: block;
-  margin: 20px 0;
-  font-size: 1.3rem;
-  font-family: "Montserrat";
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  word-break: break-word; /* prevents long email/URLs from breaking layout */
 }
 
 .f-b a:hover,
@@ -888,24 +898,27 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .f-a {
-    grid-column: 1 / 3;
+ .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
   }
 
   .f-a img {
-    width: 10%;
+    margin: 10px 6px;
   }
 
   .f-b a,
-  .f-b-sub a,
-  .f-c a,
   .f-d a {
-    font-size: 1rem;
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 30px 15px;
   }
 
   .first-hr,
@@ -917,7 +930,6 @@ footer {
   .final-p {
     font-size: 1rem;
   }
-}
 
 .modal-overlay {
   display: none;
