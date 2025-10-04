@@ -29,26 +29,26 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
- // Scroll fade-in effect
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+// Scroll fade-in effect
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
 
-      document.querySelectorAll("[data-fade]").forEach((section) => {
-        observer.observe(section);
-      });
+document.querySelectorAll("[data-fade]").forEach((section) => {
+  observer.observe(section);
+});
 
-      const phrases = [
-  "A Frontend Developer",
-  "A Product Designer",
-  "A Cybersecurity Analyst"
+const phrases = [
+  "A Software Engineer",
+  "A Graphics Designer",
+  "A Cybersecurity Analyst",
 ];
 
 const output = document.querySelector(".typewriter-output");
