@@ -38,7 +38,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.1 },
 );
 
 document.querySelectorAll("[data-fade]").forEach((section) => {
@@ -46,9 +46,9 @@ document.querySelectorAll("[data-fade]").forEach((section) => {
 });
 
 const phrases = [
-  "A Software Engineer",
-  "A Graphics Designer",
-  "A Cybersecurity Analyst",
+  "Software Engineer",
+  "UI/UX Designer",
+  "Cybersecurity Analyst",
 ];
 
 const output = document.querySelector(".typewriter-output");
@@ -73,10 +73,10 @@ function typeEffect() {
 
   if (!isDeleting && charIndex < currentPhrase.length) {
     charIndex++;
-    typingSpeed = 120;
+    typingSpeed = 150;
   } else if (isDeleting && charIndex > 0) {
     charIndex--;
-    typingSpeed = 40;
+    typingSpeed = 100;
   } else {
     isDeleting = !isDeleting;
     typingSpeed = isDeleting ? 1000 : 500;
